@@ -1,0 +1,23 @@
+#ir-arriba {
+	position: fixed;
+	bottom: 90%; /* Distancia desde abajo */
+	right: 5px; /* Distancia desde la derecha */
+}
+
+#ir-arriba span {
+	width: 60px; /* Ancho del botón */
+	height: 60px; /* Alto del botón */
+	display: block;
+	opacity: 0.3;
+	background: url(../images/arriba.png) no-repeat center center;
+}
+.close-form{
+	margin-left: 3px;
+	float: left;
+}
+.title-form{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+}

@@ -1,0 +1,82 @@
+.f-curso, .f-docente, .f-update-curso, .f-update-docente {
+    padding-top: 5px;
+    float: left;
+    color: #525459;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+	width:400px;
+	height:auto;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+    -ms-box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+    -o-box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+    box-shadow: 0 0 3px rgba(0,0,0,0.15), 0 4px 0 -3px #fff, 0 4px 0 -2px #bec2c8, 0 8px 0 -5px #fff, 0 8px 0 -4px #bec2c8;
+}
+
+.f-curso ul, .f-docente ul, .f-update-curso ul, .f-update-docente ul{
+    float: left;
+    width:auto;
+    list-style-type:none;
+    margin:0px;
+    padding:0px;
+}
+.f-curso li, .f-docente li, .f-update-curso li, .f-update-docente li{
+    padding:5px; 
+}
+.f-curso select, .f-docente select, .f-update-curso select, .f-update-docente select{
+    font-family: Helvetica, Arial, sans-serif;
+	height:auto; 
+    width:220px; 
+    padding:5px;
+}
+.f-curso input,
+.f-docente input,
+.f-update-curso input,
+.f-update-docente input{
+    text-transform: uppercase;
+    font-family: Helvetica, Arial, sans-serif;
+    height:auto; 
+    width:200px; 
+    padding:5px;
+}
+.f-curso button,
+.f-docente button,
+.f-update-curso button,
+.f-update-docente button{
+    margin-left: 300px;
+}
+.f-curso input:focus, .f-curso select:focus,
+.f-docente input:focus, .f-docente select:focus,
+.f-update-curso input:focus, .f-update-curso select:focus,
+.f-update-docente input:focus, .f-update-docente select:focus{
+    outline: 5px auto -webkit-focus-ring-color;
+    outline: 5px auto -moz-focus-ring-color;
+    outline: 5px auto -ms-focus-ring-color;
+    outline: 5px auto -o-focus-ring-color;
+    
+}
+label{
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+button.submit {
+    padding: 5px 10px;
+    font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #444;
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button.submit:hover {
+    opacity:.80;
+    cursor: pointer; 
+    color: #186086;
+}
+
+button.submit:active {
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}

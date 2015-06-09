@@ -1,0 +1,171 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html, body{
+	background-image: url(../images/fondo.png);
+    background-repeat: repeat;
+    background-position: center center; 
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    color: #939699;         
+}
+.wraper{
+	width: 100%;
+	height: 100%;
+	max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    background: none repeat scroll 0% 0% #FFF !important;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+.container{
+	padding-bottom: 10%;
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+.container-tablas{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	float: left;
+}
+.container-fecha{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	float: left;
+	width: 100%;
+	height: auto;
+}
+.container-fecha .fecha{
+	padding: 10px;
+	color: #939699;
+}
+header{
+	width: 100%;
+	float: left;
+}
+header img{
+	width: 100%;
+}
+/*Estilos del menu*/
+.navegacion {
+	margin-top: -5px;
+	width: 100%;
+	float: left;
+}
+.navegacion nav {
+	margin:auto;
+	background:#e6ab2b;
+}
+.menu_bar {
+	display:none;
+}
+.navegacion nav ul {
+	list-style:none;
+	overflow:hidden;
+	border-bottom:1px solid rgba(255,255,255, .5);	
+}
+.navegacion nav ul li {
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 20%;	
+}
+.navegacion nav ul li span {
+	margin-right: 5px;
+}
+.navegacion nav ul li a{
+	display:block;
+	padding:7.5%;
+	color:#ffffff;
+	text-decoration:none;
+}
+.navegacion nav ul li a:hover {
+	background:#e4b95b;
+}
+/*Terminan los estilos del menu de navegación*/
+/*Estilos del footer*/
+footer{
+	width: 100%;
+	max-width: 1000px;
+	position: fixed;
+	bottom: 0px;
+	text-align: justify;
+}
+.pie{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.creditos{
+	background-color: #186086;
+	border-top: 1px solid #e6ab2b;
+	float: left;
+	width: 100%;
+	font-size: 12px;
+	color: #F4F9FC;
+	text-align: left;
+	padding-top: 8px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.creditos a:link, .creditos a:visited{
+	padding-left: 10px;
+	color: #A3E3FF;
+	text-decoration: none;
+}
+.enlaces{	
+	margin-top: 7px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	float: right;
+	color: #939699;
+}
+/*Terminan los estilos del footer*/
+@media screen and (max-width: 768px) {
+	.container{
+		padding-bottom: 18%;
+	}
+	footer{
+		position: fixed;
+	}
+	.navegacion nav {
+		width:60%;
+		height:auto;
+		position: fixed;
+		left:-100%;
+		overflow:auto;
+	}
+	.menu_bar {
+		display:block;
+		width:100%;
+		border-bottom:1px solid rgba(255,255,255, .8);	
+		background:#ccc;
+	}
+	.menu_bar .bt-menu {
+		display:block;
+		padding:12px;
+		background:#e6ab2b;
+		overflow: hidden;
+		font-size:18px;
+		font-weight:bold;
+		color:#ffffff;	
+		text-decoration:none;
+	}
+	.menu_bar span {
+		float:right;
+		font-size:20px;
+	}
+	.navegacion nav ul li {
+		width: 100%;
+		text-align: left;
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .5);
+	}
+	.navegacion nav ul li a{
+		padding:5%;
+	}
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset= UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/buttons.css">
+        <link rel="stylesheet" type="text/css" href="css/formularios.css">
+        <link rel="stylesheet" type="text/css" href="css/alertify/alertify.css">
+        <link rel="stylesheet" type="text/css" href="css/alertify/alertify-bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/alertify/alertify-bootstrap-3.css">
+        <link rel="stylesheet" href="css/estilos_tablas.css">
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/alertify.js"></script>
+        <title>Pregunta Anónima</title>
+</head>
+<body>
+        <div class="wraper">
+                <header><a href="http://www.unam.mx" target="_blank"><img src="images/encabezado-unam.png" alt=""></a></header>
+                <div class="navegacion">
+                        <div class="menu_bar"><a class="bt-menu" href="#"><span class="icon-list"></span>Menu</a></div>
+                        <nav>
+                                <ul>
+                                      <li><a href="#" id="main-inicio"><span class="icon-house"></span>INICIO</a></li>
+                                      <li><a href="#" id="main-cursos"><span class="icon-text"></span>CURSOS</a></li>
+                                      <li><a href="#" id="main-docentes"><span class="icon-user"></span>DOCENTES</a></li>
+                                      <li><a href="#" id="main-creditos"><span class="icon-users"></span>CREDITOS</a></li>
+                                      <li><a href="#" id="main-acerca"><span class="icon-help"></span>ACERCA DE</a></li>
+                                </ul>
+                        </nav>
+                </div>
+                <div class="container-fecha">
+                        <h4 class="fecha"></h4>
+                </div>
+                <section class="container">
+                        <div class="container-tablas">
+                                <table id="tabla-curso" class="tabla">
+                                        <thead>
+                                                <tr>
+                                                        <th>Curso</th>
+                                                        <th>Docente</th>
+                                                        <th>Horario</th>
+                                                        <th class="th-center"></th>
+                                                        <th class="th-center"></th>
+                                                        <th class="th-center"></th>
+                                                        <th class="th-right"><a id="nuevo-curso" href="#"><img src="images/add.png"></a></th>      
+                                                </tr>
+                                        </thead>
+                                        <tbody id="tbody-curso">
+
+                                        </tbody>
+                                </table>
+                                <table id="tabla-docente" class="tabla">
+                                        <thead>
+                                                <tr>
+                                                        <th>Nombre del Docente</th>
+                                                        <th class="th-center"></th>
+                                                        <th class="th-center"></th>
+                                                        <th class="th-right"><a id="nuevo-docente" href="#"><img src="images/add.png"></a></th>      
+                                                </tr>
+                                        </thead>
+                                </table>
+
+                                <table id="tabla-pregunta" class="tabla">
+                                        <caption id="title-pregunta"></caption>
+                                        <thead>
+                                                <tr>
+                                                        <th>Pregunta</th>
+                                                        <th>Hora</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                </tr>
+                                        </thead>
+                                        <tbody id="tbody-pregunta">
+
+                                        </tbody>
+                                </table>
+                                <form id ="f-docente" class="f-docente" method="post">
+                                        <a class="close-form" href="#"><img src="images/close.png"></a>
+                                        <h3 class="title-form">Registrar Docente</h3>
+                                        <ul>
+                                                <li>
+                                                        <label>Nombre:&nbsp;</label>
+                                                        <input id="input-ndocente" type="text"  placeholder="Nombre del Docente" required />
+                                                </li>
+                                                <li>
+                                                        <label>Apellido:</label>
+                                                        <input id="input-apdocente" type="text"  placeholder="Apellidos" required />
+                                                </li>
+                                                <li><button id="agregar-docente" class="submit" type="button">Registrar</button></li>
+                                        </ul>
+                                </form>
+                                <form class="f-update-docente" method="post">
+                                        <a class="close-form" href="#"><img src="images/close.png"></a>
+                                        <h3 class="title-form">Actualizar Docente</h3>
+                                        <ul>                                  
+                                                <li>
+                                                        <label>Nombre:</label>
+                                                        <input id="input-update-ndocente" type="text"  placeholder="Nombre del Docente" required />
+                                                </li>
+                                                <li>
+                                                        <label>Apellido:</label>
+                                                        <input id="input-update-apdocente" type="text"  placeholder="Apellidos" required />
+                                                </li>
+                                                <li><button id="actualizar-docente" class="submit" type="button">Actualizar</button></li>
+                                        </ul>
+                                </form>
+                                <form class="f-curso" method="post">
+                                        <a class="close-form" href="#"><img src="images/close.png"></a>
+                                        <h3 class="title-form">Registrar Curso</h3>
+                                        <ul>
+                                                <li>
+                                                        <label>Nombre: </label>
+                                                        <input id="input-ncurso" type="text"  placeholder="Nombre del Curso" required />
+                                                </li>
+                                                <li>
+                                                        <label>Docente: </label>
+                                                        <select id="select-ndocente" required>
+                                                                <option value="" selected>Seleccionar Docente</option>
+                                                        </select>
+                                                </li>
+                                                <li>
+                                                        <label>Fecha de inicio: </label>
+                                                        <input id="input-fecha-inicio" type="date" requered/>
+                                                </li>
+                                                <li>
+                                                        <label>Fecha de cierre: </label>
+                                                        <input id="input-fecha-cierre" type="date" required/>
+                                                </li>
+                                                <li><button id="agregar-curso" class="submit" type="button">Registrar</button></li>
+                                        </ul>
+                                </form>
+                                <form class="f-update-curso" method="post">
+                                        <a class="close-form" href="#"><img src="images/close.png"></a>
+                                        <h3 class="title-form">Actualizar Curso</h3>
+                                        <ul>
+                                                <li>
+                                                        <label>Nombre:</label>
+                                                        <input id="input-update-ncurso" type="text"  placeholder="Nombre del Curso" required />
+                                                </li>
+                                                <li>
+                                                        <label>Docente:</label>
+                                                        <select id="select-update-ndocente" required></select>
+                                                </li>
+                                                <li>
+                                                        <label>Fecha de inicio: </label>
+                                                        <input id="input-update-fecha-inicio" type="date" requered/>
+                                                </li>
+                                                <li>
+                                                        <label>Fecha de cierre: </label>
+                                                        <input id="input-update-fecha-cierre" type="date" required/>
+                                                </li>
+                                                <li>
+                                                        <button id="actualizar-curso" class="submit" type="button">Actualizar</button>
+                                                </li>
+                                        </ul>
+                                </form>
+                        </div>
+                </section>
+                <div id='ir-arriba'>
+                        <a href='#Arriba'><span/></a>
+                </div>
+                <footer>
+                        <div class="creditos">
+                                <div class="pie">
+                                        Hecho en México,<a title="Universidad Nacional Autónoma de México (UNAM)" href="http://www.unam.mx">Universidad Nacional Autónoma de México (UNAM)</a>, todos los derechos reservados 2009 - 2014. Esta página puede ser reproducida con fines no lucrativos, siempre y cuando se cite la fuente completa y su dirección electrónica, y no se mutile. De otra forma requiere permiso previo por escrito de la institución.
+                                        <p>
+                                                <a class="enlaces" href="mailto:cursos.tic@unam.mx">cursos.tic@unam.mx</a>
+                                                <a class="enlaces" href="http://docencia.tic.unam.mx/biblioteca/creditos.html">Créditos&nbsp;&nbsp; |</a>
+                                        </p>
+                                </div>
+                        </div>
+                </footer>            
+        </div>
+</body>
+</html>
